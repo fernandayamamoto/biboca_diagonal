@@ -1,9 +1,9 @@
 <div class="container">
-  <h1 class="text-muted">Products</h1>
-
+  <h1 class="text-light">Products</h1>
+<ul> <div class="d-flex justify-content-between">
     <% @products.each do |product| %>
-      <%= link_to product.name, product_path(product) %>
+     <li> <%= link_to product.name, product_path(product), class: "text-decoration-none" %> </li>
     <% end %>
-
+</ul>
   <%= link_to "New product", new_product_path %>
 </div>
