@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @order = Order.newc
   end
 
   def new

@@ -3,7 +3,7 @@
 <p class="mb-3"><strong>Descrição:</strong> <%=@product.description %></p>
 <p><strong>Preço:</strong> <%=@product.price %></p>
 
-<%=link_to "Comprar", products_path, class:"btn btn-outline-warning" %>
+<%=link_to "Comprar", product_orders_path(@product), data: {turbo_method: :post}, class:"btn btn-outline-warning" %>
 <%=link_to "Back", products_path, class:"btn btn-outline-warning" %>
 <%= link_to "Excluir produto",
     product_path(@product),
