@@ -1,7 +1,7 @@
-class OrdersController < ApplicationController
-  def show
-  end
+# class OrdersController < ApplicationController
+#   def show
+#   end
 
-  def new
-  end
-end
+#   def new
+#   end
+# end
