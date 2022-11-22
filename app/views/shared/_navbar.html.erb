@@ -1,43 +1,37 @@
 <div class="navbar navbar-expand-sm navbar-dark navbar-lewagon">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-        <%= image_tag "chapeu.png" %>
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "chapeu.png" %>
       BIBOCA
-    </a>
-  </div>
+    <% end %>
 
-  <a class="navbar-brand" href="#"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Quero vender <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-  </div>
-</nav>
- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
+        <%# if user_signed_in? %>
           <li class="nav-item active">
+            <%= link_to "Quero vender", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Login", "#", class: "nav-link" %>
+          </li>
           <li class="nav-item dropdown">
-            <%= image_tag "Profile.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "harry.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Profile", profile_path ,class: "dropdown-item" %>
-              <%= link_to "My orders", orders_path ,class: "dropdown-item" %>
-              <%= link_to "New lunchbox", new_lunchbox_path(@lunchbox), class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Signup", new_user_registration_path, class: "nav-link" %>
-          </li>
-        <% end %>
+        <%# else %>
+          <!--li class="nav-item"-->
+            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <!--/li-->
+        <%# end %>
       </ul>
     </div>
+  </div>
+</div>
