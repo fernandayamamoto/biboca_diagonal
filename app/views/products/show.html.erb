@@ -1,4 +1,5 @@
-<% if @product.photo.attached? %>
+
 <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>
-<% else %>
-<%= "Produto sem imagem" %>
+  <%= @product.name %>
+  <%= @product.description %>
+  <%= @product.price %>

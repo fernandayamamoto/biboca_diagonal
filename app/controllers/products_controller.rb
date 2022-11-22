@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @poducts = Product.find(params[:id])
+    @product = Product.find(params[:id])
     @order = Order.new
   end
 
@@ -32,6 +32,9 @@ class ProductsController < ApplicationController
   end
 
   private
+  def article_params
+    params.require(:article).permit(:title, :body, :photos)
+  end
 
   def product_params
     params.require(:product).permit(:name, :price, :description, :photo)
