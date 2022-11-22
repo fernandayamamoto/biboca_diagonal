@@ -1,11 +1,10 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: %i[show edit update destroy]
   def index
     @products = Product.all
   end
 
   def show
-    @poducts = Product.find(params[:id])
-    @order = Order.new
   end
 
   def new
@@ -26,12 +25,23 @@ class ProductsController < ApplicationController
   end
 
   def update
+    if @product.update(product_params)
+      redirect to @product, notice: "Produto atualizado com sucesso!"
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
+    @product.destroy
+    redirect_to products_path(@product), status: :see_other
   end
 
   private
+
+  def set_product
+    @product = Product.find(params[:id])
+  end
 
   def product_params
     params.require(:product).permit(:name, :price, :description)
