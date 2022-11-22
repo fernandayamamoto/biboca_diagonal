@@ -82,6 +82,8 @@ GEM
     bindex (0.8.1)
     bootsnap (1.14.0)
       msgpack (~> 1.2)
+    bourbon (7.2.0)
+      thor (~> 1.0)
     builder (3.2.4)
     capybara (3.38.0)
       addressable
@@ -247,6 +249,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
+  bourbon
   capybara
   debug
   devise
