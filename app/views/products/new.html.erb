@@ -1,0 +1,9 @@
+<h1>Add a new product</h1>
+<%= simple_form_for(@product) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back", products_path, class: "btn btn-outline-dark mt-3" %>
