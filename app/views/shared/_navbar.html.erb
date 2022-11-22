@@ -2,7 +2,7 @@
   <div class="container">
     <a class="navbar-brand" href="#">
         <%= image_tag "chapeu.png" %>
-      Biboca
+      BIBOCA
     </a>
   </div>
 
@@ -18,3 +18,26 @@
     </ul>
   </div>
 </nav>
+ <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+          <li class="nav-item dropdown">
+            <%= image_tag "Profile.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Profile", profile_path ,class: "dropdown-item" %>
+              <%= link_to "My orders", orders_path ,class: "dropdown-item" %>
+              <%= link_to "New lunchbox", new_lunchbox_path(@lunchbox), class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Signup", new_user_registration_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
