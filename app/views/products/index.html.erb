@@ -1,7 +1,9 @@
-<h1>Products</h1>
+<div class="container">
+  <h1 class="text-muted">Products</h1>
 
-  <% @products.each do |product| %>
-    <%= link_to product.name, product_path(product) %>
-  <% end %>
+    <% @products.each do |product| %>
+      <%= link_to product.name, product_path(product) %>
+    <% end %>
 
-<%= link_to "New product", new_product_path %>
+  <%= link_to "New product", new_product_path %>
+</div>
