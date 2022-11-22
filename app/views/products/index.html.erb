@@ -1,10 +1,8 @@
 <h1>Products</h1>
 
-<% @product.each do |product| %>
-  <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill if product.photo.attached?%>
-  <%= product.name %>
-  <%= product.description %>
-  <%= product.price %>
-<% end %>
+  <% @products.each do |product| %>
+    <%= link_to product.name, product_path(product) %>
+  <% end %>
+
 
 <%= link_to "New product", new_product_path %>
