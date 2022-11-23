@@ -12,9 +12,9 @@
     <div class="col-sm-12 col-md-4">
       <div class="card-trip mt-3">
       <% if product.photo.attached? %>
-        <%= cl_image_tag product.photo.key, width: 400, height: 300, crop: :fill %>
+        <%= cl_image_tag product.photo.key, width: 300, height: 200, crop: :fill %>
       <% else %>
-        <%= image_tag "logo.png", width: 400, height: 300, crop: :fill %>
+        <%= "Produto sem imagem" %>
       <% end %>
         <div class="card-trip-infos" style="background-color: white">
           <div>
