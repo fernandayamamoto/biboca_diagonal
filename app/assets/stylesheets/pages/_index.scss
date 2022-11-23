@@ -1,4 +1,10 @@
 // Import page-specific CSS files here.
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .banner {
   background-size: cover;
   background-position: center;
