@@ -1,11 +1,16 @@
-<h1>Add a new product</h1>
-<%= simple_form_for(@product) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
-</div>
+<div class="container d-flex align-items justify-content-center">
+  <div class="col-4">
+    <br>
+    <div class="d-flex justify-content-center">
+    </div>
 
-<%= link_to "Back", products_path, class: "btn btn-outline-dark mt-3" %>
+<h1 class="form-actions d-grid gap-2 text-center mb-3">Adicionar produto</h1>
+  <%= simple_form_for(@product) do |f| %>
+    <%= f.input :name, input_html: {class: 'bg-white'} %>
+    <%= f.input :price, input_html: {class: 'bg-white'} %>
+    <%= f.input :description,  input_html: {class: 'bg-white'} %>
+    <%= f.input :photo, as: :file %>
+    <%= f.button :submit, "Criar produto", class: "btn btn-dark mt-3" %>
+<% end %>
+
+<%= link_to "Voltar", products_path, class: "btn btn-primary mt-3" %>
