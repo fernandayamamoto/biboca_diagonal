@@ -18,7 +18,7 @@
       <% end %>
         <div class="card-trip-infos" style="background-color: white">
           <div>
-            <li> <%= link_to product.name, product_path(product), class: "text-decoration-none" %> </li>
+           <%= link_to product.name, product_path(product), class: "text-decoration-none text-dark" %>
           </div>
           <h2 class="card-trip-pricing">R$ <%= product.price %>,00</h2>
         </div>

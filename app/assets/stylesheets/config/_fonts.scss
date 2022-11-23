@@ -1,9 +1,9 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700%7CWork+Sans:400,700&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Alegreya", "Helvetica", "sans-serif";
-$headers-font: "Alegreya", "Helvetica", "sans-serif";
+$body-font: "Work Sans", "Helvetica", "sans-serif";
+$headers-font: "Nunito", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -14,3 +14,4 @@ $headers-font: "Alegreya", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
