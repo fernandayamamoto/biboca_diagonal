@@ -38,7 +38,7 @@ class ProductsController < ApplicationController
   end
 
   private
-  
+
   def article_params
     params.require(:article).permit(:title, :body, :photos)
   end
