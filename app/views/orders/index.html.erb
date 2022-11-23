@@ -1,0 +1,17 @@
+<div class="container">
+  <br>
+  <div>
+    <h2 class="container d-flex justify-content-center .text-light">Minhas compras</h2>
+    <div class="mx-auto d-flex justify-content-center" style="width: 600px;">
+      <div class="col-sm-12 col-md-8">
+        <div class="card-trip mt-3">
+          <%= cl_image_tag @order.product.photo.key, width: 400, height: 300, crop: :fill %>
+          <div class="opacity-75">
+            <h3 class="d-flex justify-content-center mt-2"><%= @order.product.description  %></h3>
+            <h5 class="d-flex justify-content-center">R$ <%= @order.product.price %>,00</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
