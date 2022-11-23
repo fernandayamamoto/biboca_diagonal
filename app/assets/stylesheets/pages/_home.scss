@@ -1,11 +1,12 @@
-html, body {
-  margin: 0;
-  padding: 0;
-}
+
 body {
-  background: #000;
-  background: rgba(0, 0, 0, 1);
+  background: white;
+  background: black;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
 }
 
 /* ---------- Fog ---------- */
