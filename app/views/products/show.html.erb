@@ -1,16 +1,15 @@
 <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>
-  <%= @product.name %>
-  <%= @product.description %>
-  <%= @product.price %>
-
 <h1 class="mb-4 text-center">Informações do Produto</h1>
 <h2><%=@product.name%></h2>
 <p class="mb-3"><strong>Descrição:</strong> <%=@product.description %></p>
 <p><strong>Preço:</strong> <%=@product.price %></p>
 
-<%=link_to "Comprar", product_orders_path(@product), data: {turbo_method: :post}, class:"btn btn-outline-warning" %>
-<%=link_to "Back", products_path, class:"btn btn-outline-warning" %>
+<%=link_to "Comprar", product_orders_path(@product), data: {turbo_method: :post}, class: "btn btn-outline-warning" %>
+<hr>
 <%= link_to "Excluir produto",
     product_path(@product),
-    data: {turbo_method: :delete, turbo_confirm:"Tem certeza?"}
+    data: {turbo_method: :delete, turbo_confirm:"Tem certeza?"}, class: "btn btn-outline-light"
  %>
+ <hr>
+ <%=link_to "Voltar", products_path, class:"btn btn-outline-light" %>
+ </div>

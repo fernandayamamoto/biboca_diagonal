@@ -5,7 +5,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @order = Order.new
   end
 
   def new
@@ -39,6 +38,7 @@ class ProductsController < ApplicationController
   end
 
   private
+
   def article_params
     params.require(:article).permit(:title, :body, :photos)
   end
