@@ -1,5 +1,15 @@
-<%= simple_form_for(article) do |f| %>
-  <!-- [...] -->
-  <%= f.input :photo, as: :file %>
-  <!-- [...] -->
-<% end %>
+<div class="container d-flex align-items justify-content-center">
+  <div class="col-4">
+    <br>
+  <div class="d-flex justify-content-center form-actions d-grid gap-2 text-center mb-3">
+  </div>
+
+    <%= simple_form_for(@product) do |f| %>
+      <%= f.input :name, input_html: {class: 'bg-white'} %>
+      <%= f.input :price, input_html: {class: 'bg-white'} %>
+      <%= f.input :description,  input_html: {class: 'bg-white'} %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
