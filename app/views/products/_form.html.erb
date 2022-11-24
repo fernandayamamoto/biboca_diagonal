@@ -9,7 +9,9 @@
       <%= f.input :price, input_html: {class: 'bg-white'} %>
       <%= f.input :description,  input_html: {class: 'bg-white'} %>
       <%= f.input :photo, as: :file %>
-      <%= f.button :submit, class: "btn btn-primary" %>
+      <div class="submit-button mx-5">
+        <%= f.button :submit, class: "btn btn-primary" %>
+      </div>
     <% end %>
   </div>
 </div>

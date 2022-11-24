@@ -8,3 +8,15 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.submit-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
