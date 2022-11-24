@@ -6,25 +6,27 @@
 </div>
 
 
-<div class="container">
-<div class="row">
-  <% @products.each do |product| %>
-    <div class="col-sm-12 col-md-4">
-      <div class="card-trip mt-3">
-      <% if product.photo.attached? %>
-        <%= cl_image_tag product.photo.key, width: 300, height: 200, crop: :fill %>
-      <% else %>
-        <%= "Produto sem imagem" %>
-      <% end %>
-        <div class="card-trip-infos" style="background-color: white">
-          <div>
-           <%= link_to product.name, product_path(product), class: "text-decoration-none text-dark" %>
+
+
+    <div class="container">
+      <div class="row">
+        <% @products.each do |product| %>
+          <div class="col-sm-12 col-md-4">
+            <div class="card-trip mt-3">
+              <% if product.photo.attached? %>
+              <%= cl_image_tag product.photo.key, width: 300, height: 200, crop: :fill %>
+              <% else %>
+              <%= "Produto sem imagem" %>
+              <% end %>
+              <div class="card-trip-infos" style="background-color: white">
+                <div>
+                  <%= link_to product.name, product_path(product), class: "text-decoration-none text-dark" %>
+                </div>
+                <h2 class="card-trip-pricing">R$ <%= product.price %>,00</h2>
+              </div>
+            </div>
           </div>
-          <h2 class="card-trip-pricing">R$ <%= product.price %>,00</h2>
-        </div>
+        <% end %>
       </div>
-    </div>
-<% end %>
-</div>
-  <%= link_to "New product", new_product_path, class: 'btn btn-dark mt-3 mb-5' %>
-</div>
+    <%= link_to "New product", new_product_path, class: 'btn btn-dark mt-3 mb-5' %>
+  </div>
