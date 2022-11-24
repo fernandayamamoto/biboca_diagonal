@@ -10,15 +10,16 @@
       <%= f.input :email,
                   required: false,
                   autofocus: true,
-                  input_html: { autocomplete: "email" } %>
+                  input_html: {autocomplete: "email", class: 'bg-white'} %>
       <%= f.input :password,
                   required: false,
-                  input_html: { autocomplete: "current-password" } %>
+                  input_html: {autocomplete: "current-password", class: 'bg-white'} %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Log in", class: 'btn btn-login' %>
+      <%= f.button :submit, "Log in", class:"btn btn-primary" %>
+      <hr>
         <%= render "devise/shared/links" %>
     </div>
     <% end %>

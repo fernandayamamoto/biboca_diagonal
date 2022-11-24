@@ -11,7 +11,7 @@
         </div>
           <div class="product-button">
             <%=link_to "Comprar", product_orders_path(@product), data: {turbo_method: :post}, class:"btn btn-outline-dark mt-2 mb-2" %>
-            <%=link_to "Voltar", products_path, class:"btn btn-outline-dark mt-2 mb-2" %>
+            <%= link_to "Editar produto", edit_product_path(@product), class: "btn btn-outline-dark mt-2 mb-2" %>
             <%= link_to "Excluir produto",
                 product_path(@product),
                 data: {turbo_method: :delete, turbo_confirm:"Tem certeza?"}, class: "btn btn-outline-dark mt-2 mb-2"
