@@ -1,27 +1,31 @@
-<div class="form">
-  <h2>Sign up</h2>
+<div class="container d-flex align-items justify-content-center">
+  <div class="col-4">
+    <br>
+    <h2 class="text-center mb-3">Sign up</h2>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
-    <%= f.error_notification %>
+    <div class="d-flex justify-content-center">
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
+      <%= f.error_notification %>
 
-    <div class="form-inputs">
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
+        <div class="form-inputs">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" }%>
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up", class: 'btn btn-login' %>
+      <%= f.button :submit, "Sign up", class: 'btn btn-primary' %>
+      <%= render "devise/shared/links" %>
     </div>
-  <% end %>
-
-  <%= render "devise/shared/links" %>
+    <% end %>
+    </div>
+  </div>
 </div>
