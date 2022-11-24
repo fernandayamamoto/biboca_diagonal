@@ -1,10 +1,11 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.where(user: current_user)
+    @orders = policy_scope(Order).where(user: current_user)
   end
 
   def show
     @order = Order.find(params[:id])
+    authorize @order
   end
 
   def create
@@ -12,6 +13,7 @@ class OrdersController < ApplicationController
     @product = Product.find(params[:product_id])
     @order.product = @product
     @order.user = current_user
+    authorize @order
     if @order.save
       redirect_to product_order_path(@product, @order)
     else
