@@ -1,7 +1,7 @@
 <div class="container">
   <br>
   <div>
-    <h2 class="container d-flex justify-content-center .text-light">Minhas compras</h2>
+    <h2 class="container d-flex justify-content-center .text-light">Thank you!</h2>
     <div class="mx-auto d-flex justify-content-center" style="width: 600px;">
       <div class="col-sm-12 col-md-8">
         <div class="card-trip mt-3">
@@ -9,7 +9,9 @@
           <div class="opacity-75">
             <h3 class="d-flex justify-content-center mt-2"><%= @order.product.description  %></h3>
             <h5 class="d-flex justify-content-center">R$ <%= @order.product.price %>,00</h5>
-            <%=link_to "Voltar", products_path, class:"btn btn-outline-dark mt-2 mb-2" %>
+            <div class = "d-flex justify-content-center m-3">
+              <%=link_to "Meus produtos", orders_path, class:"btn btn-primary m-2" %>
+            </div>
           </div>
         </div>
       </div>
