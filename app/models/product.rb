@@ -5,4 +5,7 @@ class Product < ApplicationRecord
 
   has_many :orders, dependent: :destroy
 
+  validates :name, presence: true
+  validates :price, presence: true
+  validates :description, presence: true
 end
