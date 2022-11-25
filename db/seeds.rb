@@ -19,7 +19,7 @@ products = [
   {user: user, name: "FÊNIX", price: 7000, description: "The phoenix is a creature present in legends ranging from Ancient Egypt to East Asian regions. Above all, its main feature is the ability to regenerate and rise from the ashes after death.", photo: 'FÊNIX.jpg'},
   {user: user, name: "BICHENTO", price: 3000, description: "Crookshanks was a half-sniffing cat and Hermione Granger's pet. He is Half-Snuggle,[1] as he has in evidence a lion's tail, ability to solve problems alone without training, and an ability to recognize untrustworthy people (even when transfigured).
     Crookshanks was purchased from the Magical Pets store by Hermione Granger. The saleswoman stated that it had been in the store for a long time and nobody wanted it.", photo: 'GATO.jpg'},
-  {user: user, name: "BUCKBEAK", price: 9000, description: "Buckbeak is a proud and quite aggressive creature. Buckbeak is actually very affectionate and loyal to people who treat him with kindness and respect.", photo: 'BICUÇO.jpg'}
+  {user: user, name: "BUCKBEAK", price: 9000, description: "Buckbeak is a proud and quite aggressive creature. Buckbeak is actually very affectionate and loyal to people who treat him with kindness and respect.", photo: 'BICUCO.jpg'}
 ]
 
 products.each do |product|
