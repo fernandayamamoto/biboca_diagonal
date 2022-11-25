@@ -4,9 +4,11 @@
       <%= cl_image_tag @product.photo.key, width: 400, height: 300, crop: :fill %>
       <div class="opacity-75">
         <h1 class="mb-4 text-center"><%=@product.name%></h1>
-        <div class="product-name">
-          <h5 class="mb-3"><strong>Description:</strong> <%=@product.description %></h5>
-          <h5> <%= number_to_currency(@product.price, unit: "$", separator: ",", delimiter: "") %></h5>
+
+        <div class="product-name text-center mr-5">
+          <p class="mb-3"><strong>Description:</strong> <%=@product.description %></p>
+           <h5> <%= number_to_currency(@product.price, unit: "$", separator: ",", delimiter: "") %></h5>
+
         </div>
           <div class="product-button text-center">
             <%=link_to "Buy", product_orders_path(@product), data: {turbo_method: :post}, class:"btn btn-dark mt-2 mb-2" %>
