@@ -9,7 +9,7 @@
             <%#= cl_image_tag order.photo.key, width: 400, height: 300, crop: :fill %>
             <div class="opacity-75">
               <h3 class="d-flex justify-content-center mt-2"><%= order.product.description  %></h3>
-              <h5 class="d-flex justify-content-center">R$ <%= order.product.price %>,00</h5>
+              <h5 class="d-flex justify-content-center"> <%= number_to_currency(order.product.price, unit: "$", separator: ",", delimiter: "")%></h5>
             </div>
         </div>
         <% end %>
