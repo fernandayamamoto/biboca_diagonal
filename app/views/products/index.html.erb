@@ -24,7 +24,7 @@
                 <div>
                   <%= link_to product.name, product_path(product), class: "text-decoration-none text-dark" %>
                 </div>
-                <h2 class="card-trip-pricing">R$ <%= product.price %>,00</h2>
+                <h2 class="card-trip-pricing"><%= number_to_currency(product.price, unit: "$", separator: ",", delimiter: "") %></h2>
               </div>
             </div>
           </div>
