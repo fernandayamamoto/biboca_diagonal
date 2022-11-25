@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-dark navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-dark navbar-lewagon sticky-top ">
   <div class="container-fluid">
     <%= link_to products_path, class: "navbar-brand" do %>
       <%= image_tag "chapeu.png" %>
@@ -19,7 +19,7 @@
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "harry.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "icons8-harry-potter-48.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My products", orders_path, class: "dropdown-item" %>
               <%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
