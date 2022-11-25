@@ -6,29 +6,31 @@
   </div>
 </div>
 
-<div class="carousel">
+<div id="particles-js">
+<div class="carousel" >
   <% @products.each_with_index do |product, index| %>
-    <input type="radio" name="position" <%= "checked" if index.zero? %>  />
+    <input type="radio" name="position" <%= "checked" if index.zero? %> >
   <% end %>
-  <main id="carousel">
+  <div id="carousel">
    <% @products.each do |product| %>
-
-             <div class="item">
-            <div class="card-trip mt-3">
-              <% if product.photo.attached? %>
-              <%= cl_image_tag product.photo.key, width: 300, height: 200, crop: :fill %>
-              <% else %>
-              <%= "Produto sem imagem" %>
-              <% end %>
-              <div class="card-trip-infos" style="background-color: white">
-                <div>
-                  <%= link_to product.name, product_path(product), class: "text-decoration-none text-dark" %>
-                </div>
-                <h2 class="card-trip-pricing"><%= number_to_currency(product.price, unit: "$", separator: ",", delimiter: "") %></h2>
-              </div>
-            </div>
-          </div>
-
+    <div class="item">
+      <%= link_to product_path(product) do %>
+      <div class="card-trip mt-3">
+        <% if product.photo.attached? %>
+        <%= cl_image_tag product.photo.key, width: 300, height: 200, crop: :fill %>
+        <% else %>
+        <%= "Produto sem imagem" %>
+        <% end %>
+        <div class="card-trip-infos" style="background-color: white">
+          <h2 class="card-trip-pricing"> <%= product.name %></h2>
+          <h2 class="card-trip-pricing"><%= number_to_currency(product.price, unit: "$", separator: ",", delimiter: "") %></h2>
+        </div>
+      </div>
+      <% end %>
+    </div>
     <% end %>
-    <main>
+  </div>
 </div>
+</div>
+
+ <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
