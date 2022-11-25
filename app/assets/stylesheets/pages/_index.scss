@@ -118,7 +118,7 @@ body {
   justify-items: center;
 }
 
-main#carousel {
+div#carousel {
   grid-row: 1 / 2;
   grid-column: 1 / 8;
   width: 100vw;
@@ -132,7 +132,7 @@ main#carousel {
   --items: 5;
   --middle: 3;
   --position: 1;
-  pointer-events: none;
+  // pointer-events: none;
 }
 
 div.item {
@@ -187,7 +187,7 @@ input:nth-of-type(1) {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
-input:nth-of-type(1):checked ~ main#carousel {
+input:nth-of-type(1):checked ~ div#carousel {
   --position: 1;
 }
 
@@ -195,7 +195,7 @@ input:nth-of-type(2) {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
 }
-input:nth-of-type(2):checked ~ main#carousel {
+input:nth-of-type(2):checked ~ div#carousel {
   --position: 2;
 }
 
@@ -203,7 +203,7 @@ input:nth-of-type(3) {
   grid-column: 4 /5;
   grid-row: 2 / 3;
 }
-input:nth-of-type(3):checked ~ main#carousel {
+input:nth-of-type(3):checked ~ div#carousel {
   --position: 3;
 }
 
@@ -211,7 +211,7 @@ input:nth-of-type(4) {
   grid-column: 5 / 6;
   grid-row: 2 / 3;
 }
-input:nth-of-type(4):checked ~ main#carousel {
+input:nth-of-type(4):checked ~ div#carousel {
   --position: 4;
 }
 
@@ -219,7 +219,7 @@ input:nth-of-type(5) {
   grid-column: 6 / 7;
   grid-row: 2 / 3;
 }
-input:nth-of-type(5):checked ~ main#carousel {
+input:nth-of-type(5):checked ~ div#carousel {
   --position: 5;
 }
 
@@ -227,7 +227,7 @@ input:nth-of-type(6) {
   grid-column: 7 / 8;
   grid-row: 2 / 3;
 }
-input:nth-of-type(6):checked ~ main#carousel {
+input:nth-of-type(6):checked ~ div#carousel {
   --position: 6;
 }
 
@@ -235,7 +235,7 @@ input:nth-of-type(7) {
   grid-column: 8 / 9;
   grid-row: 2 / 3;
 }
-input:nth-of-type(7):checked ~ main#carousel {
+input:nth-of-type(7):checked ~ div#carousel {
   --position: 7;
 }
 
@@ -243,7 +243,7 @@ input:nth-of-type(8) {
   grid-column: 9 / 10;
   grid-row: 2 / 3;
 }
-input:nth-of-type(8):checked ~ main#carousel {
+input:nth-of-type(8):checked ~ div#carousel {
   --position: 8;
 }
 
@@ -251,7 +251,7 @@ input:nth-of-type(9) {
   grid-column: 9 / 10;
   grid-row: 2 / 3;
 }
-input:nth-of-type(9):checked ~ main#carousel {
+input:nth-of-type(9):checked ~ div#carousel {
   --position: 9;
 }
 
@@ -259,7 +259,7 @@ input:nth-of-type(10) {
   grid-column: 10 / 11;
   grid-row: 2 / 3;
 }
-input:nth-of-type(10):checked ~ main#carousel {
+input:nth-of-type(10):checked ~ div#carousel {
   --position: 10;
 }
 
@@ -267,7 +267,7 @@ input:nth-of-type(11) {
   grid-column: 11 / 12;
   grid-row: 2 / 3;
 }
-input:nth-of-type(11):checked ~ main#carousel {
+input:nth-of-type(11):checked ~ div#carousel {
   --position: 11;
 }
 
@@ -275,6 +275,6 @@ input:nth-of-type(12) {
   grid-column: 12 / 13;
   grid-row: 2 / 3;
 }
-input:nth-of-type(12):checked ~ main#carousel {
+input:nth-of-type(12):checked ~ div#carousel {
   --position: 12;
 }
