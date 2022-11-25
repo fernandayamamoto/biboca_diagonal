@@ -107,8 +107,13 @@ body {
   padding: 16px;
 }
 
+#particles-js {
+  height: 100vh;
+  background-color: #10141b;
+}
 //carousel começo
 .carousel {
+  position: absolute;
   height: 600px;
   margin: 0;
   display: grid;

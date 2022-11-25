@@ -5,7 +5,8 @@
   </div>
 </div>
 
-<div class="carousel">
+<div id="particles-js">
+<div class="carousel" >
   <% @products.each_with_index do |product, index| %>
     <input type="radio" name="position" <%= "checked" if index.zero? %> >
   <% end %>
@@ -29,3 +30,6 @@
     <% end %>
   </div>
 </div>
+</div>
+
+ <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
